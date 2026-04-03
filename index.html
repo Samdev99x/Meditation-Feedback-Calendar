@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+    <div class="app-shell">
+        <div class="ambient ambient-left"></div>
+        <div class="ambient ambient-right"></div>
+
+        <main class="container">
+            <section class="hero-card"> 
+                <p class="personal-greeting" id="personalGreeting">Guten Morgen, Samuel</p>
+                <h1>Deine 5-Minuten-Challenge</h1>
+                <p class="hero-copy">
+                    Jeden Tag kurz ankommen, einen Haken setzen und den Fortschritt ruhig wachsen lassen.
+                </p>
+
+                <div class="stat-grid">
+                    <article class="stat-card stat-card-highlight">
+                        <span class="stat-label">Aktueller Tag</span>
+                        <strong class="stat-value" id="currentDayValue">Tag 1</strong>
+                        <span class="stat-subtle" id="progressValue">0 / 30 erledigt</span>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-label">Startdatum</span>
+                        <strong class="stat-value stat-value-small" id="startDateValue">-</strong>
+                        <span class="stat-subtle">Du kannst dein Startdatum selbst setzen.</span>
+                    </article>
+                </div>
+
+                <form class="date-form" id="startDateForm">
+                    <label class="date-form-label" for="startDateInput">Startdatum festlegen</label>
+                    <div class="date-form-row">
+                        <input class="date-input" id="startDateInput" name="startDate" type="date">
+                        <button class="date-button" type="submit">Datum speichern</button>
+                    </div>
+                    <p class="date-form-hint">
+                        Wenn du das Startdatum änderst, wird der gesamte Feedbackkalender wieder auf 0 zurückgesetzt.
+                    </p>
+                </form>
+            </section>
+
+            <section class="quote-card">
+                <button class="quote-card-button" id="quoteToggle" type="button" aria-expanded="false">
+                    <div class="quote-card-header">
+                        <div class="quote-badge" id="quoteBadge">Tagesimpuls</div>
+                        <span class="quote-toggle-hint" id="quoteToggleHint">Tippe fuer mehr</span>
+                    </div>
+                    <blockquote id="quoteText">
+                        Realize deeply that the present moment is all you ever have.
+                    </blockquote>
+                    <p class="quote-author" id="quoteAuthor">Eckhart Tolle</p>
+                    <div class="quote-reflection" id="quoteReflectionWrap" aria-hidden="true">
+                        <p class="quote-reflection-text" id="quoteReflection">
+                            Studien zeigen, dass Achtsamkeit die Aktivitaet im Default Mode Network reduzieren kann. Das bedeutet oft weniger Grübeln und mehr Klarheit im Alltag.
+                        </p>
+                    </div>
+                </button>
+            </section>
+
+            <section class="overview-card">
+                <div class="overview-header">
+                    <div>
+                        <p class="section-label">Challenge-Status</p>
+                        <h2>Dein Fortschritt im Blick</h2>
+                    </div>
+                    <div class="progress-ring" aria-hidden="true">
+                        <div class="progress-ring-inner" id="completionPercent">0%</div>
+                    </div>
+                </div>
+
+                <div class="milestone-row">
+                    <div class="milestone-pill">
+                        <span class="milestone-title">Aktive Etappe</span>
+                        <span class="milestone-value" id="stageValue">30 Tage</span>
+                    </div>
+                    <div class="milestone-pill">
+                        <span class="milestone-title">Verbleibend</span>
+                        <span class="milestone-value" id="remainingValue">30 Tage</span>
+                    </div>
+                </div>
+
+                <a class="primary-link" href="calendar.html">Zum Feedbackkalender</a>
+            </section>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navigation">
+            <a class="nav-link nav-link-active" href="index.html">Home</a>
+            <a class="nav-link" href="calendar.html">Kalender</a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

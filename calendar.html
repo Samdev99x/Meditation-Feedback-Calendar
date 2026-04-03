@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Kalender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="calendar">
+    <div class="app-shell">
+        <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+        <div class="ambient ambient-left"></div>
+        <div class="ambient ambient-right"></div>
+
+        <main class="container">
+            <section class="calendar-intro">
+                <p class="eyebrow">Feedback Kalender</p>
+                <p class="personal-greeting" id="calendarGreeting">Guten Morgen, Samuel</p>
+                <h1>Hake jeden Tag bewusst ab</h1>
+                <p class="hero-copy">
+                    Sichtbar sind immer nur deine aktuell freigeschalteten Tage. Neue Etappen erscheinen erst nach Abschluss.
+                </p>
+            </section>
+
+            <section class="calendar-status">
+                <article class="status-card">
+                    <span class="status-label">Freigeschaltet</span>
+                    <strong class="status-value" id="calendarRangeValue">30 Tage</strong>
+                </article>
+                <article class="status-card">
+                    <span class="status-label">Abgehakt</span>
+                    <strong class="status-value" id="completedValue">0</strong>
+                </article>
+                <article class="status-card">
+                    <span class="status-label">Heute</span>
+                    <strong class="status-value" id="todayValue">Tag 1</strong>
+                </article>
+            </section>
+
+            <section class="calendar-card">
+                <div class="calendar-header">
+                    <div>
+                        <p class="section-label">Tagesfelder</p>
+                        <h2 id="calendarHeading">Deine freigeschalteten 30 Tage</h2>
+                    </div>
+                    <span class="calendar-hint">Zukünftige Tage bleiben gesperrt.</span>
+                </div>
+
+                <div class="calendar-grid" id="calendarGrid"></div>
+            </section>
+
+            <section class="reward-card hidden" id="rewardCard">
+                <p class="section-label">Belohnung</p>
+                <h2 id="rewardTitle">🎉 Gratulation! 🙌</h2>
+                <p id="rewardText"></p>
+            </section>
+
+            <section class="extend-card hidden" id="extendCard">
+                <p class="section-label">Nächster Schritt</p>
+                <h2 id="extendTitle">Auf 60 Tage verlängern</h2>
+                <p id="extendText">
+                    Stark. Deine erste Etappe ist vollständig. Wenn du möchtest, verlängere direkt auf die nächste Runde.
+                </p>
+                <button class="extend-button" id="extendButton" type="button">Etappe freischalten</button>
+            </section>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link nav-link-active" href="calendar.html">Kalender</a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
